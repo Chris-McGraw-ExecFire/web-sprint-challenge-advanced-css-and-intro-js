@@ -201,6 +201,18 @@ export const artists = [
     }
 ]
 
+function getArtistByIndex(arr, idx) {
+
+  id = arr[idx]["id"]
+  name = arr[idx]["name"]
+
+  return `The artist at index ${id} is ${name}`
+}  
+
+console.log(getArtistByIndex(artists, 0))
+
+
+
 // 🖌🖼 M V P 🖼🖌 //
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -210,11 +222,26 @@ Practice accessing data above by console.log-ing following items:
 (2) Bio of the third artist (2nd index) in the array */
 
 
+console.log(artists[0]['name'])
+console.log(artists[2]["bio"])
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+artists.splice(8,1,   {
+  "id": 8,
+  "name": "Vincent van Gough",
+  "years": "1853 - 1890",
+  "genre": "Post-Impressionism",
+  "nationality": "Dutch",
+  "bio": "Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.",
+  "wikipedia": "http://en.wikipedia.org/wiki/Vincent_van_Gogh",
+  "paintings": 877
+})
 
+console.log(artists[8]["name"])
 
+// I really wanted to be able to go into the object and edit that one argument. Didn't understand how to do that with the array method.
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called `getArtistByIndex` that takes two arguments:
@@ -225,9 +252,15 @@ Create a function called `getArtistByIndex` that takes two arguments:
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `the artist at index 0 is Amedeo Modigliani`
 */
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(arr, idx) {
+
+  id = arr[idx]["id"]
+  name = arr[idx]["name"]
+
+  return `The artist at index ${id} is ${name}`
 }  
+
+console.log(getArtistByIndex(artists, 0))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() 
