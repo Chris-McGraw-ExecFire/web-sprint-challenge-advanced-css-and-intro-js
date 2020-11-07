@@ -80,7 +80,18 @@ nav{
 }
 nav a{
     color:#626262;
+    margin: 0 1rem;
 }
+nav a.Home{
+    font-weight: 1000;
+    
+}
+nav a.bordered{
+    padding: 0 10%;
+    border-left:.1rem solid black;
+    border-right: .1rem solid black;
+}
+
 nav span{
     border-left:1% solid #626262;
 
@@ -101,7 +112,7 @@ nav span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:60vh;
+    height:30vh;
     margin:5% 0;
 }	
 .title-container div:hover {	
@@ -133,8 +144,10 @@ button:hover{
 }
 
 .artist{
-    width:40%;
+    width:45%;
     text-align:center;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
 }
 .artist img{
     width:100%;
@@ -169,10 +182,6 @@ header{
 
 }
 
-Nav{
-    flex-direction: column;
-    width:15%;
-}
 
 .title-container{
     width: 100%;
