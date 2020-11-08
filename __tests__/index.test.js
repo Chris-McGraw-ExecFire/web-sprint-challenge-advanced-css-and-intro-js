@@ -1,4 +1,4 @@
-import functions from '../index';
+ functions from '../index';
 let artists;
 beforeEach(()=>{
     artists = [

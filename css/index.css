@@ -154,6 +154,7 @@ button:hover{
 }
 
 
+
 /*this is the beginning of the mobile/tablet sizing section*/
 @media (max-width: 500px){
 /* for cell phone */
@@ -230,4 +231,5 @@ button{
     justify-content: center;
     height:20vh;
 
+}
 }

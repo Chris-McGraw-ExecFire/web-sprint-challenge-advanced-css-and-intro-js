@@ -1,4 +1,4 @@
-export const artists = [
+const artists = [
     {
       "id": 0,
       "name": "Amedeo Modigliani",
@@ -201,15 +201,6 @@ export const artists = [
     }
 ]
 
-function getArtistByIndex(arr, idx) {
-
-  id = arr[idx]["id"]
-  name = arr[idx]["name"]
-
-  return `The artist at index ${id} is ${name}`
-}  
-
-console.log(getArtistByIndex(artists, 0))
 
 
 
@@ -228,7 +219,7 @@ console.log(artists[2]["bio"])
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-artists.splice(8,1,   {
+artists.splice(8,1,{
   "id": 8,
   "name": "Vincent van Gough",
   "years": "1853 - 1890",
@@ -239,7 +230,6 @@ artists.splice(8,1,   {
   "paintings": 877
 })
 
-console.log(artists[8]["name"])
 
 // I really wanted to be able to go into the object and edit that one argument. Didn't understand how to do that with the array method.
 
@@ -257,10 +247,9 @@ function getArtistByIndex(arr, idx) {
   id = arr[idx]["id"]
   name = arr[idx]["name"]
 
-  return `The artist at index ${id} is ${name}`
+  return `the artist at index ${id} is ${name}`
 }  
 
-console.log(getArtistByIndex(artists, 0))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() 
@@ -269,9 +258,20 @@ it returns an array with names of artists who were born in and died in 20th cent
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(arr){
+  const twentCenturyArtists = [];
+
+  for (let i = 0; i<arr.length; i++){
+    if (arr[i]["years"]>"1899"){
+      name = arr[i]["name"];
+       twentCenturyArtists.push(`${name}`)
+    }
+  }
+  return twentCenturyArtists
+  
+  
 }
+
 
 
 
@@ -284,9 +284,13 @@ Create a function called `removeArtist` that takes two arguments:
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
-function removeArtist(/*Your Code Here*/) {
-   /*Your Code Here*/
+function removeArtist(arr, idx) {
+  arr.splice(idx,1)
+
+  return(idx)
 }
+
+removeArtist(artists,19)
    
 
 /**
